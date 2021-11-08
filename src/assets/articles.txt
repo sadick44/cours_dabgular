@@ -1,0 +1,3 @@
+stupid vs solid
+semver 2.0
+hoisting
