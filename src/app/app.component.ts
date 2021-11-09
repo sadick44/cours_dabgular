@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
-/* interface Person{ name:string, age:number} */
+ interface Person{ name:string, age:number} 
 
 @Component({
   selector: 'app-root',
@@ -11,13 +11,13 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  name:string = "khalid";
+  /* name:string = "khalid";
   firstNumber: number = 4;
 
    sum = (first:number, second:number)=>{
      return first+second;
-   }
-  /*  khalid: Person = {name: "khalid", age:25}
+   } */
+  khalid: Person = {name: "khalid", age:25}
 
    persons: Person[] = [
      this.khalid,
@@ -30,5 +30,5 @@ export class AppComponent {
    constructor(){
      this.khalid.age = 25;
    }
- */
+
 }
