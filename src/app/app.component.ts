@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 
- interface Person{ name:string, age:number} 
+ interface Person{ name:string, age:number};
 
 @Component({
   selector: 'app-root',

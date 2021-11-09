@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
+import { Person } from 'src/app/model/person';
 
-
-interface Person{ name:string, age:number};
 
 @Component({
   selector: 'app-about-us',
@@ -17,6 +16,4 @@ export class AboutUsComponent {
     {name: "tom", age:22},
     {name: "motti", age:21},
    ]
-
-
 }
