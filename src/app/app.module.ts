@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
     HomeComponent,
     CardsComponent,
     ListComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

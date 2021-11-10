@@ -8,6 +8,7 @@ import {Data} from '../../model/Data'
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent{
 
   contact: Contact = {name:'', email:'', phone:'', message: ''}
