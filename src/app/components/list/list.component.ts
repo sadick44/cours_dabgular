@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Card } from '../../model/Card';
+
 
 ;
 @Component({
@@ -8,13 +10,20 @@ import { Card } from '../../model/Card';
   styleUrls: ['./list.component.scss']
 })
 
-export class ListComponent {
+export class ListComponent implements OnInit {
   @Input() data : Card[];
-
+@Output() likeClick: EventEmitter<number> = new EventEmitter<number>()
 
   constructor(){
     this.data = []
-  } 
-
   }
- 
+
+  ngOnInit() {
+    console.log(this.data)
+    
+  }
+  onLikeClick(id: number){
+    this.likeClick.emit(id);
+    console.log("Button clicked")
+  }
+} 

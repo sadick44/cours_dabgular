@@ -10,19 +10,18 @@ import { Card } from '../../model/Card';
 })
 export class AboutUsComponent implements OnInit {
 
-  khalid: Person = {name: "khalid", age:25}
 
    persons: Person[] = [
-    {name: "sadick", age:25},
-    {name: "tom", age:22},
-    {name: "motti", age:21},
+    {id:1, name: "sadick", age:25},
+    {id:2, name: "tom", age:22},
+    {id:3, name: "motti", age:21},
    ]
 
    personUrl: string ="https://material.angular.io/assets/img/examples/shiba2.jpg";
    data:Card[] = [];
    ngOnInit(){
      this.data  = this.persons.map((person)=>{
-       return {title:person.name, subTitle:person.age+' ans', image: this.personUrl};
+       return {id: person.id, title:person.name, subTitle:person.age+' ans', image: this.personUrl};
      });
    }
 }

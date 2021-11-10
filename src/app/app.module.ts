@@ -10,11 +10,15 @@ import { HomeComponent } from './components/home/home.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ListComponent } from './components/list/list.component';
 import { RouterModule, Routes } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { ContactComponent } from './components/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'about-us', component: AboutUsComponent}
-]
+  {path: 'about-us', component: AboutUsComponent},
+  {path: 'contact', component: ContactComponent}
+];
 
 @NgModule({
   declarations: [
@@ -22,14 +26,17 @@ const routes: Routes = [
     AboutUsComponent,
     HomeComponent,
     CardsComponent,
-    ListComponent
+    ListComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule, RouterModule.forRoot(routes)
+    MatButtonModule, RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

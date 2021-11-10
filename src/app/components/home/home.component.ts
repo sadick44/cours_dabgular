@@ -9,9 +9,6 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  products: Product[] = [];
-
-
   data:Card[] = [];
 
 
@@ -21,12 +18,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
    this.productService.getProducts().subscribe((products: Product[])=>{
-      this.data  = this.products.map((product)=>{
-        return {title:product.name, subTitle:product.price+' euros', image:product.picture};
+      this.data  = products.map((product)=>{
+        return {id: product.id, title:product.name, subTitle:product.price+' euros', image:product.picture};
       }); 
     });
    
 
+  }
+  onLikeClick(id: number){
+    console.log("Button clicked of "+id);
   }
 
 }
