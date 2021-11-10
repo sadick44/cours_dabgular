@@ -16,7 +16,7 @@ export class ContactComponent{
 constructor(private contactService: ContactService){}
  
   onSubmit(): void{
-    this.contactService.create(this.contact).subscribe(response =>console.log(response))
+    this.contactService.create(this.contact).subscribe((contact: Contact) =>console.log(contact))
   }
 
 }
