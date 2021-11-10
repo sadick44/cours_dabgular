@@ -14,11 +14,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
+import { PanierComponent } from './components/panier/panier.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: 'panier', component: PanierComponent}
 ];
 
 @NgModule({
@@ -29,8 +31,10 @@ const routes: Routes = [
     CardsComponent,
     ListComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    PanierComponent
   ],
+
   imports: [
     CommonModule,
     BrowserModule,
@@ -40,7 +44,9 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule
   ],
+
   exports: [RouterModule],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
